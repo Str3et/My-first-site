@@ -37,6 +37,10 @@ a {
 }
 
 .menu-link:hover {
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.menu-link:active {
     color: #212121;
 }
 
@@ -61,6 +65,12 @@ a {
 
 .logo {
     margin-top: 63px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.logo:hover {
+    border-bottom: 3px solid #212121;
 }
 
 .menu-link-active {
@@ -285,6 +295,7 @@ a {
 
 .product-list:hover .icon-hover {
     display: flex;
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .promo-content-1 {
@@ -480,6 +491,7 @@ a {
 .footer-basement {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 77px;
     max-width: 1170px;
 }
@@ -512,7 +524,7 @@ a {
 }
 
 .useful-info-link:hover {
-    color: #6c6c6c;
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .useful-info-link:active {
@@ -609,10 +621,7 @@ a {
 }
 
 .trending-image:hover {
-    outline: solid;
-    outline-color: #212121;
-    outline-width: 1px;
-    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .trending-image:active {
@@ -671,6 +680,10 @@ a {
 }
 
 .hero-menu-link:hover {
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.hero-menu-link:active {
     color: #212121;
 }
 
@@ -695,10 +708,7 @@ a {
 }
 
 .fa-paper-plane {
-    display: block;
-    position: absolute;
-    left: 90%;
-    top: 55%;
+    font-size: 18px;
     color: #6c6c6c;
 }
 
@@ -881,14 +891,11 @@ a {
 }
 
 .location-list-link:hover {
-    outline: 3px solid #9c9c9c;
-    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .location-list-link:active {
-    outline: 0;
-    box-shadow: 0 0px 0px 0px rgba(33, 33, 33, 0.35);
-    border: 1px solid red;
+    outline: 3px solid #9c9c9c;
 }
 
 .fa-map-marker-alt {
@@ -932,6 +939,36 @@ a {
 
 }
 
+.button-plane {
+    position: absolute;
+    left: 90%;
+    top: 50%;
+    background-color: #ffffff;
+    border: 0;
+}
+
+.icon-link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #777;
+    color: #ddd;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.icon-link:hover {
+    color: #777;
+    background-color: #ddd;
+}
+
+.basement-social {
+    display: flex;
+}
+
 @media screen and (max-width: 1000px) {
 
     .header,
@@ -939,15 +976,22 @@ a {
     .tab-expolre,
     .footer-basement,
     .footer-center,
-    .product-details-slider {
+    .product-details-slider,
+    .exclusive-product {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .trending-product-list {
         align-items: center;
         justify-content: center;
     }
 
     .footer-center-contact-us,
     .footer-center-information,
-    .footer-center-touch {
+    .footer-center-touch,
+    .exclusive-product-list {
         margin-top: 25px;
     }
 
@@ -955,4 +999,21 @@ a {
         padding-top: 60px;
     }
 
+}
+
+
+@keyframes shadow-drop-2-center {
+    0% {
+        transform: translateZ(0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: translateZ(50px);
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.app-image:hover {
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
