@@ -565,7 +565,7 @@ a {
 
 .insertEmail {
     display: block;
-    width: 320px;
+    width: 310px;
     height: 48px;
     color: #6c6c6c;
     font-size: 14px;
@@ -573,7 +573,7 @@ a {
     border: 1px solid #d9dee1;
     background-color: #ffffff;
     padding-left: 19px;
-    padding-right: 32px;
+    padding-right: 45px;
     margin-top: 20px;
 }
 
@@ -880,6 +880,17 @@ a {
     opacity: 0.9;
 }
 
+.location-list-link:hover {
+    outline: 3px solid #9c9c9c;
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+}
+
+.location-list-link:active {
+    outline: 0;
+    box-shadow: 0 0px 0px 0px rgba(33, 33, 33, 0.35);
+    border: 1px solid red;
+}
+
 .fa-map-marker-alt {
     color: #212121;
     font-size: 48px;
@@ -918,6 +929,7 @@ a {
 .location-list-adress-text {
     list-style-type: none;
     text-align: center;
+
 }
 
 @media screen and (max-width: 1000px) {
